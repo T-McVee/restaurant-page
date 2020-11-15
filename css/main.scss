@@ -69,7 +69,7 @@ nav {
     h1 {
         color: $black;
         font-size: 2rem;
-        letter-spacing: $ltr-space;
+        letter-spacing: 4px;
         margin: 0;
       }
       span {
@@ -133,5 +133,11 @@ nav {
       margin: 0.5rem 0;
     }
   }
+}
+
+.footer {
+  justify-content: space-between;
+  background-color: $black;
+  color: $bg-color;
 }
 

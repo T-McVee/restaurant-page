@@ -97,7 +97,7 @@ nav ul li:hover {
 .splash .col:first-child h1 {
   color: #393737;
   font-size: 2rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin: 0;
 }
 
@@ -179,5 +179,13 @@ nav ul li:hover {
 .valueProps .col p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+}
+
+.footer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #393737;
+  color: #fcf3ec;
 }
 /*# sourceMappingURL=main.css.map */
