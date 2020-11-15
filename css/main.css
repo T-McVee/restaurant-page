@@ -1,0 +1,183 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fcf3ec;
+  padding: 0;
+  margin: 0;
+  color: #393737;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #393737;
+  margin: 1.5rem 0 20px 0;
+  padding: 0;
+}
+
+nav .logo {
+  margin-left: 4rem;
+  color: #fcf3ec;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fcf3ec;
+  letter-spacing: 2px;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.splash .col:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  padding: 0 4rem 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.splash .col:first-child h1 {
+  color: #393737;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.splash .col:first-child span {
+  color: #393737;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 0.5rem 0 1rem;
+}
+
+.splash .col:first-child p {
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.6rem;
+}
+
+.splash .col:first-child .btn {
+  border: 2px solid #393737;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #393737;
+}
+
+.splash .col:first-child .btn:hover {
+  cursor: pointer;
+  background-color: #393737;
+  color: #fcf3ec;
+}
+
+.splash .col:nth-child(2) {
+  width: 40%;
+  margin-top: 4rem;
+}
+
+.splash .col:nth-child(2) .img {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.valueProps {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.valueProps .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.valueProps .col .img {
+  width: 65px;
+  height: 65px;
+  background-size: contain;
+}
+
+.valueProps .col h2 {
+  margin: 0.5rem 0 0;
+  letter-spacing: 2px;
+}
+
+.valueProps .col p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+/*# sourceMappingURL=main.css.map */

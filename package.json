@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "The Odin Project: Restaurant Page Assignment - create a restaurant page using only js to dynamically render the whole site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-McVee/restaurant-page.git"
+  },
+  "author": "Tim McVinish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T-McVee/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/T-McVee/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}

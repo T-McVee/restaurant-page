@@ -1,0 +1,137 @@
+@import 'config';
+
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+background: $bg-color;
+padding: 0;
+margin: 0;
+color: $black;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $black;
+  margin: 1.5rem 0 20px 0;
+  padding: 0;
+
+  .logo {
+    margin-left: 4rem;
+    color: $bg-color;
+    letter-spacing: $ltr-space;
+    font-size: 1.5rem;
+  }
+  
+  ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $bg-color;
+        letter-spacing: 2px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.splash {
+  .col:first-child {
+    display: flex;
+    width: 60%;
+    padding: 0 4rem 0 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: $black;
+        font-size: 2rem;
+        letter-spacing: $ltr-space;
+        margin: 0;
+      }
+      span {
+        color: $black;
+        font-size: 1.2rem;
+        letter-spacing: $ltr-space;
+        margin: 0.5rem 0 1rem;
+      }
+    p {
+      margin: 1rem;
+      font-size: 1.1rem;
+      text-align: justify;
+      letter-spacing: $ltr-space;
+      line-height: 1.6rem;
+    }
+    .btn {
+      border: 2px solid $black;
+      padding: 0.5rem 3rem;
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      letter-spacing: $ltr-space;
+      text-decoration: none;
+      color: $black;
+    }
+    .btn:hover {
+      cursor: pointer;
+      background-color: $black;
+      color: $bg-color;
+    }
+  }
+
+  .col:nth-child(2) {
+    width: 40%;
+    margin-top: 4rem;
+    .img {
+      width: 100%;
+      height: 100vh;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.valueProps {
+  justify-content: space-evenly;
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .img {
+      width: 65px;
+      height: 65px;
+      background-size: contain;
+    }
+    h2 {
+      margin: 0.5rem 0 0;
+      letter-spacing: $ltr-space;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
