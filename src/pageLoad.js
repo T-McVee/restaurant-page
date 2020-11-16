@@ -1,16 +1,17 @@
-import { navBar } from './navBar'
-import { row } from './row.js'
+import { navBar } from './components/navBar'
+import { row } from './components/row'
+import { footer } from './components/footer'
 
-const pageLoad = ((pages, index, target) => {
-  const _init = (() => {
-    let sections = Object.keys(pages[index].content);
-    target.appendChild(navBar(pages));
-    sections.forEach(section => {
-      if (section != 'footer') {
-        target.appendChild(row(pages[index].content[section], section));
-      }
-    });
-  })();
+const pageLoad = ((pageContent, index, target) => {
+  let sections = Object.keys(pageContent.pages[index].content);
+
+  target.appendChild(navBar(pageContent.pages));
+  sections.forEach(section => {
+    if (section != 'footer') {
+      target.appendChild(row(pageContent.pages[index].content[section], section));
+    }
+  });
+  target.appendChild(footer(pageContent));
 });
 
 export { pageLoad };

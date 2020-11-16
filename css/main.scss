@@ -28,6 +28,9 @@ nav {
     color: $bg-color;
     letter-spacing: $ltr-space;
     font-size: 1.5rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   
   ul {
@@ -41,15 +44,16 @@ nav {
         text-decoration: none;
         color: $bg-color;
         letter-spacing: 2px;
-      }
-      &:hover {
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+          color: darken($color: $bg-color, $amount: 15);
+        }
       }
     }
   }
 }
 
-.row {
+.row, footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,6 +83,7 @@ nav {
         margin: 0.5rem 0 1rem;
       }
     p {
+      width: 100%;
       margin: 1rem;
       font-size: 1.1rem;
       text-align: justify;
@@ -113,31 +118,85 @@ nav {
 }
 
 .valueProps {
-  justify-content: space-evenly;
+  justify-content: space-between;
   .col {
+    width: 33%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     .img {
-      width: 65px;
-      height: 65px;
+      width: 3.5rem;
+      height: 3.5rem;
       background-size: contain;
     }
     h2 {
       margin: 0.5rem 0 0;
       letter-spacing: $ltr-space;
+      text-align: center;
     }
     p {
       font-size: 1.1rem;
       margin: 0.5rem 0;
+      text-align: center;
+    }
+  }
+  .col:first-child {
+    .img {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 3px;
     }
   }
 }
 
-.footer {
+footer {
+  align-items: flex-end;
   justify-content: space-between;
   background-color: $black;
   color: $bg-color;
+  letter-spacing: $ltr-space;
+  padding: 1rem 4rem;
+  .col {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: $bg-color;
+      li {
+        margin: 0.5rem 0;
+        a {
+          color: $bg-color;
+          text-decoration: none;
+          &:hover {
+            cursor: pointer;
+            color: darken($color: $bg-color, $amount: 15);
+          }
+        }
+      } 
+    }
+    span {
+      line-height: 1.4rem;
+      margin: 0 0 0.5rem;
+    }
+    &:first-child {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+      align-items: flex-end;
+      span {
+        width: 198px;
+        text-align: justify;
+      }
+    }
+  }
 }
 

@@ -35,6 +35,10 @@ nav .logo {
   font-size: 1.5rem;
 }
 
+nav .logo:hover {
+  cursor: pointer;
+}
+
 nav ul {
   width: 50%;
   display: -webkit-box;
@@ -58,11 +62,12 @@ nav ul li a {
   letter-spacing: 2px;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
   cursor: pointer;
+  color: #f2c9aa;
 }
 
-.row {
+.row, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +114,7 @@ nav ul li:hover {
 }
 
 .splash .col:first-child p {
+  width: 100%;
   margin: 1rem;
   font-size: 1.1rem;
   text-align: justify;
@@ -144,12 +150,13 @@ nav ul li:hover {
 }
 
 .valueProps {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .valueProps .col {
+  width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,26 +173,105 @@ nav ul li:hover {
 }
 
 .valueProps .col .img {
-  width: 65px;
-  height: 65px;
+  width: 3.5rem;
+  height: 3.5rem;
   background-size: contain;
 }
 
 .valueProps .col h2 {
   margin: 0.5rem 0 0;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .valueProps .col p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
+  text-align: center;
 }
 
-.footer {
+.valueProps .col:first-child .img {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 3px;
+}
+
+footer {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #393737;
   color: #fcf3ec;
+  letter-spacing: 2px;
+  padding: 1rem 4rem;
+}
+
+footer .col {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fcf3ec;
+}
+
+footer .col ul li {
+  margin: 0.5rem 0;
+}
+
+footer .col ul li a {
+  color: #fcf3ec;
+  text-decoration: none;
+}
+
+footer .col ul li a:hover {
+  cursor: pointer;
+  color: #f2c9aa;
+}
+
+footer .col span {
+  line-height: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+footer .col:first-child {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .col:last-child {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .col:last-child span {
+  width: 198px;
+  text-align: justify;
 }
 /*# sourceMappingURL=main.css.map */
