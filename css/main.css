@@ -1,3 +1,132 @@
+.home .splash .col:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  padding: 0 4rem 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s, -webkit-transform 2s;
+  transition: opacity 0.5s, -webkit-transform 2s;
+  transition: transform 2s, opacity 0.5s;
+  transition: transform 2s, opacity 0.5s, -webkit-transform 2s;
+}
+
+.home .splash .col:first-child h1 {
+  color: #393737;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.home .splash .col:first-child span {
+  color: #393737;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin: 0.5rem 0 1rem;
+}
+
+.home .splash .col:first-child p {
+  width: 100%;
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  letter-spacing: 2px;
+  line-height: 1.6rem;
+}
+
+.home .splash .col:first-child .btn {
+  border: 2px solid #393737;
+  padding: 0.5rem 3rem;
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #393737;
+}
+
+.home .splash .col:first-child .btn:hover {
+  cursor: pointer;
+  background-color: #393737;
+  color: #fcf3ec;
+}
+
+.home .splash .col:nth-child(2) {
+  width: 40%;
+  margin-top: 4rem;
+  opacity: 1;
+  -webkit-transition: opacity 0.8s, -webkit-transform 2s;
+  transition: opacity 0.8s, -webkit-transform 2s;
+  transition: transform 2s, opacity 0.8s;
+  transition: transform 2s, opacity 0.8s, -webkit-transform 2s;
+}
+
+.home .splash .col:nth-child(2) .img {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.home .valueProps {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .valueProps .col {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .valueProps .col .img {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: contain;
+}
+
+.home .valueProps .col h2 {
+  margin: 0.5rem 0 0;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.home .valueProps .col p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.home .valueProps .col:first-child .img {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 3px;
+}
+
+.menu {
+  border: 2px red solid;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -54,17 +183,19 @@ nav ul {
 
 nav ul li {
   list-style: none;
-}
-
-nav ul li a {
   text-decoration: none;
   color: #fcf3ec;
   letter-spacing: 2px;
 }
 
-nav ul li a:hover {
+nav ul li:hover {
   cursor: pointer;
   color: #f2c9aa;
+}
+
+.module {
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .row, footer {
@@ -81,122 +212,21 @@ nav ul li a:hover {
   padding: 2rem 4rem;
 }
 
-.splash .col:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 60%;
-  padding: 0 4rem 0 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.slide-left {
+  -webkit-transform: translate(-10vw) scale(1.1);
+          transform: translate(-10vw) scale(1.1);
+  opacity: 0 !important;
 }
 
-.splash .col:first-child h1 {
-  color: #393737;
-  font-size: 2rem;
-  letter-spacing: 4px;
-  margin: 0;
-}
-
-.splash .col:first-child span {
-  color: #393737;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  margin: 0.5rem 0 1rem;
-}
-
-.splash .col:first-child p {
-  width: 100%;
-  margin: 1rem;
-  font-size: 1.1rem;
-  text-align: justify;
-  letter-spacing: 2px;
-  line-height: 1.6rem;
-}
-
-.splash .col:first-child .btn {
-  border: 2px solid #393737;
-  padding: 0.5rem 3rem;
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  text-decoration: none;
-  color: #393737;
-}
-
-.splash .col:first-child .btn:hover {
-  cursor: pointer;
-  background-color: #393737;
-  color: #fcf3ec;
-}
-
-.splash .col:nth-child(2) {
-  width: 40%;
-  margin-top: 4rem;
-}
-
-.splash .col:nth-child(2) .img {
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-}
-
-.valueProps {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.valueProps .col {
-  width: 33%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.valueProps .col .img {
-  width: 3.5rem;
-  height: 3.5rem;
-  background-size: contain;
-}
-
-.valueProps .col h2 {
-  margin: 0.5rem 0 0;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.valueProps .col p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  text-align: center;
-}
-
-.valueProps .col:first-child .img {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 3px;
+.slide-right {
+  -webkit-transform: translate(10vw) scale(1.1);
+          transform: translate(10vw) scale(1.1);
+  opacity: 0 !important;
 }
 
 footer {
+  position: relative;
+  bottom: 0;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -235,14 +265,11 @@ footer .col ul {
 
 footer .col ul li {
   margin: 0.5rem 0;
-}
-
-footer .col ul li a {
   color: #fcf3ec;
   text-decoration: none;
 }
 
-footer .col ul li a:hover {
+footer .col ul li:hover {
   cursor: pointer;
   color: #f2c9aa;
 }

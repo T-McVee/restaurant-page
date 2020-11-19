@@ -1,5 +1,3 @@
-import { _h1, _h2, _p, _span, _button } from './elements'
-
 const _renderImg = ((url) => {
   const img = document.createElement('div');
   img.classList.add('img');
@@ -8,15 +6,22 @@ const _renderImg = ((url) => {
   return img;
 });
 
-const _renderText = ((input, type) => {
-  let text;
-  type === 'h1' ? text = _h1(input)
-    : type === 'h2' ? text = _h2(input)
-      : type === 'subtitle' || type.match(/text/ig) ? text = _span(input)
-        : type === 'button' ? text = _button(input)
-          : text = _p(input);
+const _renderBtn = ((content) => {
+  const btn = document.createElement('a');
+  btn.classList.add('btn');
+  btn.textContent = content.text;
+  btn.addEventListener('click', () => {
+    console.log(content.action);
+  });
 
-  return text;
+  return btn;
+})
+
+const _renderText = ((content, type) => {
+  const textElement = document.createElement(type);
+  textElement.textContent = content;
+
+  return textElement;
 });
 
 const _renderLinks = ((links) => {
@@ -24,10 +29,8 @@ const _renderLinks = ((links) => {
   links.forEach(link => {
     if (link.title != 'Home') {
       let li = document.createElement('li');
-      let a = document.createElement('a');
-      a.textContent = link.title;
-      a.setAttribute('href', link.url);
-      li.appendChild(a);
+      li.textContent = link.title;
+      li.setAttribute('data-index', link.index);
       ul.appendChild(li);
     }
   });
@@ -35,15 +38,34 @@ const _renderLinks = ((links) => {
   return ul;
 });
 
+const _swapModule = () => {
+  let moduleParent = document.querySelector('#content');
+  console.log(moduleParent);
+
+  // Transition out current content
+  moduleParent.childNodes[1].childNodes[0].childNodes[0].classList.add('slide-left');
+  moduleParent.childNodes[1].childNodes[0].childNodes[1].classList.add('slide-right');
+
+  // swap to new content
+  setTimeout(() => {
+    moduleParent.childNodes[1].remove();
+    console.log(moduleParent);
+
+  }, 1400);
+}
+
 const _renderCol = ((colContent) => {
   const elements = Object.keys(colContent);
   const col = document.createElement('div');
   col.classList.add('col');
   elements.forEach(el => {
-    el != 'img'
-      ? col.appendChild(_renderText(colContent[el], el))
-      : col.appendChild(_renderImg(colContent[el]))
-  })
+    el === 'img'
+      ? col.appendChild(_renderImg(colContent[el]))
+      : el === 'button'
+        ? col.appendChild(_renderBtn(colContent[el]))
+        : col.appendChild(_renderText(colContent[el], el))
+
+  });
 
   return col;
 });

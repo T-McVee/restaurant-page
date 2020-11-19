@@ -1,4 +1,5 @@
 
+/*
 const _h1 = ((content) => {
   const h1 = document.createElement('h1');
   h1.textContent = content;
@@ -31,7 +32,10 @@ const _button = ((content) => {
   const btn = document.createElement('a');
   btn.classList.add('btn');
   btn.textContent = content.text;
-  btn.setAttribute('href', content.url);
+  //btn.setAttribute('href', content.url);
+  btn.addEventListener('click', () => {
+    alert('You smell');
+  });
 
   return btn;
 });
@@ -42,4 +46,4 @@ export {
   _span,
   _p,
   _button,
-};
+}; */
