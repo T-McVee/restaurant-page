@@ -107,7 +107,7 @@ footer {
         }
       } 
     }
-    span {
+    span, i {
       line-height: 1.4rem;
       margin: 0 0 0.5rem;
     }
@@ -121,8 +121,26 @@ footer {
       align-items: flex-end;
       span {
         width: 198px;
-        text-align: justify;
+        text-align: right;
       }
+    }
+  }
+  .col:nth-child(2) {
+    //flex-direction: row;
+    span {
+      margin: 0;
+    }
+    a {
+      color: $bg-color;
+      transition: transform 0.3s;
+      i {
+        padding: 0.5rem 0 0;
+      }
+    }
+    a:hover {
+      cursor: pointer;
+      color: darken($color: $bg-color, $amount: 15);
+      transform: scale(1.05);
     }
   }
 }
