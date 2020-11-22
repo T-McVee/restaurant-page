@@ -4,7 +4,24 @@
   height: 75vh;
   .address {
     width: 50%;
-    border: 2px red solid;
+    flex-direction: column;
+    padding: 6rem 0 2rem 4rem;
+    .col:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 30%;
+      padding-bottom: 1rem;
+    }
+    .col:nth-child(2) {
+      width: 100%;
+      height: 70%;
+      #map {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .hours {
     width: 50%;

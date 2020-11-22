@@ -1,3 +1,5 @@
+import { Loader } from '@googlemaps/js-api-loader'
+
 const renderImg = ((url) => {
   const img = document.createElement('div');
   img.classList.add('img');
@@ -36,9 +38,36 @@ const renderLinks = ((links) => {
   return ul;
 });
 
+const _renderMap = (() => {
+  const mapEl = document.createElement('div');
+  mapEl.id = 'map';
+  let map;
+
+  const loader = new Loader({
+    apiKey: '',
+    version: 'weekly'
+  });
+  loader.load().then(() => {
+    map = new google.maps.Map(mapEl, {
+      center: { lat: 49.285, lng: -123.12 },
+      zoom: 14,
+    });
+  });
+  return mapEl;
+});
+
+const _renderIcon = ((iconData) => {
+  const icon = document.createElement('i');
+  iconData.classes.forEach(ic => icon.classList.add(ic));
+  const link = document.createElement('a');
+  link.setAttribute('href', iconData.url);
+  link.appendChild(icon);
+
+  return link
+})
+
 const renderCol = ((colContent) => {
   const elements = Object.keys(colContent);
-
 
   const col = document.createElement('div');
   col.classList.add('col');
@@ -47,7 +76,11 @@ const renderCol = ((colContent) => {
       ? col.appendChild(renderImg(colContent[el]))
       : el === 'button'
         ? col.appendChild(renderBtn(colContent[el]))
-        : col.appendChild(renderText(colContent[el], el))
+        : el === 'map'
+          ? col.appendChild(_renderMap())
+          : el === 'i'
+            ? col.appendChild(_renderIcon(colContent[el]))
+            : col.appendChild(renderText(colContent[el], el))
 
   });
 

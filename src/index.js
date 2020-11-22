@@ -112,17 +112,18 @@ const siteData = {
       index: 3, title: 'Contact', content: {
         address: {
           col1: {
-            h2: 'This is a map',
+            h3: 'Address',
+            div2: '123 Fake Street',
+            div3: 'Vancouver, BC',
+            div4: 'V06 0E1'
           },
           col2: {
-            div1: '123 Fake Street',
-            div2: 'Vancouver, BC',
-            div4: 'V06 0E1'
+            map: {}
           }
         },
         hours: {
           col1: {
-            h2: 'Hours',
+            h3: 'Hours',
             span: 'Monday: 12:00 - 22:00',
             span: 'Tuesday: 12:00 - 22:00',
             wed: 'Wednesday: 12:00 - 22:00',
@@ -138,10 +139,14 @@ const siteData = {
   ],
   footer: {
     col2: {
-      text: `Created by T-McVee`
+      span: `Created by T-McVee `,
+      i: {
+        classes: ['fab', 'fa-github', 'fa-lg'],
+        url: 'https://github.com/T-McVee'
+      }
     },
     col3: {
-      text1: 'Icons made by Freepik from www.flaticon.com',
+      span: 'Icons made by Freepik from www.flaticon.com',
     }
   }
 }
