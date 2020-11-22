@@ -49,7 +49,8 @@ const siteData = {
       index: 1, title: 'Menu', url: '#', content: {
         lunchTitle: {
           col1: {
-            h2: 'Lunch'
+            h2: 'Lunch',
+            div: '11:30am - 4:00pm'
           }
         },
         lunchItems: {
@@ -71,7 +72,8 @@ const siteData = {
         },
         dinnerTitle: {
           col1: {
-            h2: 'Dinner'
+            h2: 'Dinner',
+            div: '4:00pm - close'
           }
         },
         dinnerItems: {
@@ -95,8 +97,11 @@ const siteData = {
     },
     {
       index: 2, title: 'About', content: {
-        about: {
+        intro: {
           col1: {
+            img: 'url(../img/pizza-oven.jpg)'
+          },
+          col2: {
             h2: 'For the love of pizza',
             p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in eaque vel assumenda, facilis ipsam. Incidunt recusandae quibusdam ab, ad quod sint accusamus. Corporis accusamus repellat error animi nisi ipsam veritatis praesentium in tempore nam repellendus ipsum, suscipit perferendis fugiat!'
           }

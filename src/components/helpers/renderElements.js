@@ -1,4 +1,4 @@
-const _renderImg = ((url) => {
+const renderImg = ((url) => {
   const img = document.createElement('div');
   img.classList.add('img');
   img.style.backgroundImage = url;
@@ -6,7 +6,7 @@ const _renderImg = ((url) => {
   return img;
 });
 
-const _renderBtn = ((content) => {
+const renderBtn = ((content) => {
   const btn = document.createElement('a');
   btn.classList.add('btn');
   btn.textContent = content.text;
@@ -16,13 +16,13 @@ const _renderBtn = ((content) => {
   return btn;
 })
 
-const _renderText = ((content, type) => {
+const renderText = ((content, type) => {
   const textElement = document.createElement(type.match(/^h[123456]|[^0-9]+/));
   textElement.textContent = content;
   return textElement;
 });
 
-const _renderLinks = ((links) => {
+const renderLinks = ((links) => {
   const ul = document.createElement('ul');
   links.forEach(link => {
     if (link.title != 'Home') {
@@ -36,7 +36,7 @@ const _renderLinks = ((links) => {
   return ul;
 });
 
-const _renderCol = ((colContent) => {
+const renderCol = ((colContent) => {
   const elements = Object.keys(colContent);
 
 
@@ -44,10 +44,10 @@ const _renderCol = ((colContent) => {
   col.classList.add('col');
   elements.forEach(el => {
     el === 'img'
-      ? col.appendChild(_renderImg(colContent[el]))
+      ? col.appendChild(renderImg(colContent[el]))
       : el === 'button'
-        ? col.appendChild(_renderBtn(colContent[el]))
-        : col.appendChild(_renderText(colContent[el], el))
+        ? col.appendChild(renderBtn(colContent[el]))
+        : col.appendChild(renderText(colContent[el], el))
 
   });
 
@@ -55,8 +55,8 @@ const _renderCol = ((colContent) => {
 });
 
 export {
-  _renderImg,
-  _renderText,
-  _renderLinks,
-  _renderCol
+  renderImg,
+  renderText,
+  renderLinks,
+  renderCol
 }

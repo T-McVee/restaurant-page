@@ -1,4 +1,4 @@
-import { _renderLinks } from './helpers/renderElements'
+import { renderLinks } from './helpers/renderElements'
 
 const navBar = ((pages) => {
 
@@ -13,7 +13,7 @@ const navBar = ((pages) => {
 
   const navBar = document.createElement('nav');
   navBar.appendChild(_createLogo());
-  navBar.appendChild(_renderLinks(pages));
+  navBar.appendChild(renderLinks(pages));
 
   return navBar;
 });

@@ -135,9 +135,8 @@
   margin-bottom: 3px;
 }
 
-.menu .lunchtitle {
-  padding-top: 2rem;
-  border: 2px red solid;
+.menu {
+  letter-spacing: 2px;
 }
 
 .menu .col {
@@ -155,25 +154,94 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0;
+}
+
+.menu .lunch-title, .menu .dinner-title {
+  padding-top: 6rem;
+}
+
+.menu .lunch-title .col h2, .menu .dinner-title .col h2 {
+  margin: 0 0 0.5rem;
+}
+
+.menu .lunch-items .col, .menu .dinner-items .col {
   height: 28vh;
   width: 33%;
-  padding: 0;
   border: 2px #393737 solid;
   margin: 0 5%;
 }
 
-.menu .col h2 {
+.menu .lunch-items .col h2, .menu .dinner-items .col h2 {
   margin: 0;
   padding: 0 0.25rem;
   border-bottom: 2px #393737 solid;
 }
 
-.menu .col p {
+.menu .lunch-items .col p, .menu .dinner-items .col p {
   width: 180px;
 }
 
-.menu .dinner {
-  padding-top: 0;
+.menu .dinner-title {
+  padding-top: 2rem;
+}
+
+.menu .dinner-items {
+  margin-bottom: 4rem;
+}
+
+.about {
+  letter-spacing: 2px;
+  min-height: 75vh;
+}
+
+.about .intro {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .intro .col:first-child {
+  width: 100%;
+  height: 200px;
+  padding-top: 4rem;
+}
+
+.about .intro .col:first-child .img {
+  width: 100%;
+  height: 100%;
+}
+
+.about .intro .col:nth-child(2) {
+  margin: 2rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .intro .col:nth-child(2) h2 {
+  text-align: center;
+  border-bottom: 2px #393737 solid;
+  padding: 0 0.25rem;
+}
+
+.about .intro .col:nth-child(2) p {
+  width: 60%;
+  text-align: justify;
+  line-height: 1.2rem;
 }
 
 .contact {
