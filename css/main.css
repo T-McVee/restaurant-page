@@ -1,3 +1,15 @@
+.home .deco {
+  position: absolute;
+  border: 2px #393737 solid;
+  opacity: 0.1;
+  height: 100vh;
+  width: 40vw;
+  z-index: -1;
+  right: 8rem;
+  top: 8rem;
+  margin-right: 4rem;
+}
+
 .home .splash .col:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,13 +88,13 @@
   background-repeat: no-repeat;
 }
 
-.home .valueProps {
+.home .value-props {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.home .valueProps .col {
+.home .value-props .col {
   width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,32 +111,103 @@
           flex-direction: column;
 }
 
-.home .valueProps .col .img {
+.home .value-props .col .img {
   width: 3.5rem;
   height: 3.5rem;
   background-size: contain;
 }
 
-.home .valueProps .col h2 {
+.home .value-props .col h2 {
   margin: 0.5rem 0 0;
   letter-spacing: 2px;
   text-align: center;
 }
 
-.home .valueProps .col p {
+.home .value-props .col p {
   font-size: 1.1rem;
   margin: 0.5rem 0;
   text-align: center;
 }
 
-.home .valueProps .col:first-child .img {
+.home .value-props .col:first-child .img {
   width: 3rem;
   height: 3rem;
   margin-bottom: 3px;
 }
 
-.menu {
+.menu .lunchtitle {
+  padding-top: 2rem;
   border: 2px red solid;
+}
+
+.menu .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 28vh;
+  width: 33%;
+  padding: 0;
+  border: 2px #393737 solid;
+  margin: 0 5%;
+}
+
+.menu .col h2 {
+  margin: 0;
+  padding: 0 0.25rem;
+  border-bottom: 2px #393737 solid;
+}
+
+.menu .col p {
+  width: 180px;
+}
+
+.menu .dinner {
+  padding-top: 0;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 75vh;
+}
+
+.contact .address {
+  width: 50%;
+  border: 2px red solid;
+}
+
+.contact .hours {
+  width: 50%;
+}
+
+.contact .hours .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 * {
@@ -236,6 +319,7 @@ footer {
   background-color: #393737;
   color: #fcf3ec;
   letter-spacing: 2px;
+  height: 25vh;
   padding: 1rem 4rem;
 }
 

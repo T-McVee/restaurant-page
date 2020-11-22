@@ -47,8 +47,12 @@ const siteData = {
     },
     {
       index: 1, title: 'Menu', url: '#', content: {
-        lunch: {
-          h1: { h1: 'Lunch' },
+        lunchTitle: {
+          col1: {
+            h2: 'Lunch'
+          }
+        },
+        lunchItems: {
           col1: {
             h2: 'Margarita',
             p: 'cheese, basil, love',
@@ -65,8 +69,12 @@ const siteData = {
             price: '20'
           }
         },
-        dinner: {
-          h1: { h1: 'Dinner' },
+        dinnerTitle: {
+          col1: {
+            h2: 'Dinner'
+          }
+        },
+        dinnerItems: {
           col1: {
             h2: 'Margarita',
             p: 'cheese, basil, love',
@@ -85,7 +93,16 @@ const siteData = {
         }
       }
     },
-    { index: 2, title: 'About', url: '#' },
+    {
+      index: 2, title: 'About', content: {
+        about: {
+          col1: {
+            h2: 'For the love of pizza',
+            p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto in eaque vel assumenda, facilis ipsam. Incidunt recusandae quibusdam ab, ad quod sint accusamus. Corporis accusamus repellat error animi nisi ipsam veritatis praesentium in tempore nam repellendus ipsum, suscipit perferendis fugiat!'
+          }
+        }
+      }
+    },
     {
       index: 3, title: 'Contact', content: {
         address: {
@@ -93,10 +110,9 @@ const siteData = {
             h2: 'This is a map',
           },
           col2: {
-            div1: 'street',
-            div2: 'city',
-            div3: 'state',
-            div4: 'post code'
+            div1: '123 Fake Street',
+            div2: 'Vancouver, BC',
+            div4: 'V06 0E1'
           }
         },
         hours: {

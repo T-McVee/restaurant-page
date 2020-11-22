@@ -1,3 +1,29 @@
 .menu {
-  border: 2px red solid;
+  .lunchtitle {
+    padding-top: 2rem;
+    border: 2px red solid;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 28vh;
+    width: 33%;
+    padding: 0;
+    border: 2px $black solid;
+    margin: 0 5%;
+    h2 {
+      margin: 0;
+      padding: 0 0.25rem;
+      border-bottom: 2px $black solid;
+    }
+    p {
+      width: 180px;
+    }
+  }
+  .dinner {
+    padding-top: 0;
+  }
 }

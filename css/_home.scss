@@ -1,4 +1,15 @@
 .home {
+  .deco {
+    position: absolute;
+    border: 2px $black solid;
+    opacity: 0.1;
+    height: 100vh;
+    width: 40vw;
+    z-index: -1;
+    right: 8rem;
+    top: 8rem;
+    margin-right: 4rem;
+  }
   .splash {
     .col:first-child {
       display: flex;
@@ -57,7 +68,7 @@
       }
     }
   }
-  .valueProps {
+  .value-props {
     justify-content: space-between;
     .col {
       width: 33%;
