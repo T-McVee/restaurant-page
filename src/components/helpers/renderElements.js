@@ -11,16 +11,14 @@ const _renderBtn = ((content) => {
   btn.classList.add('btn');
   btn.textContent = content.text;
   btn.addEventListener('click', () => {
-    console.log(content.action);
   });
 
   return btn;
 })
 
 const _renderText = ((content, type) => {
-  const textElement = document.createElement(type);
+  const textElement = document.createElement(type.match(/^h[123456]|[^0-9]+/));
   textElement.textContent = content;
-
   return textElement;
 });
 
@@ -38,24 +36,10 @@ const _renderLinks = ((links) => {
   return ul;
 });
 
-const _swapModule = () => {
-  let moduleParent = document.querySelector('#content');
-  console.log(moduleParent);
-
-  // Transition out current content
-  moduleParent.childNodes[1].childNodes[0].childNodes[0].classList.add('slide-left');
-  moduleParent.childNodes[1].childNodes[0].childNodes[1].classList.add('slide-right');
-
-  // swap to new content
-  setTimeout(() => {
-    moduleParent.childNodes[1].remove();
-    console.log(moduleParent);
-
-  }, 1400);
-}
-
 const _renderCol = ((colContent) => {
   const elements = Object.keys(colContent);
+
+
   const col = document.createElement('div');
   col.classList.add('col');
   elements.forEach(el => {
