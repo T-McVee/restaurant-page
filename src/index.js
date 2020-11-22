@@ -11,6 +11,7 @@ const siteData = {
     {
       index: 0, title: 'Home', url: '#', content:
       {
+        deco: {},
         splash: {
           col1: {
             h1: 'Welcome To LePizz',
@@ -47,41 +48,72 @@ const siteData = {
     {
       index: 1, title: 'Menu', url: '#', content: {
         lunch: {
+          h1: { h1: 'Lunch' },
           col1: {
             h2: 'Margarita',
-            body: 'cheese, basil, love'
-          },
-          col2: {
-            h2: 'Capricosa',
-            body: 'Artichoke, Mozzerella, Basil, rich tomato sauce'
-          },
-          col3: {
-            h2: 'Al Fungi',
-            body: 'All the shrooms, spicy peperoni, rich tomato sauce'
-          }
-        },
-        dinner: {
-          col1: {
-            h2: 'Margarita',
-            body: 'cheese, basil, love',
+            p: 'cheese, basil, love',
             price: '14'
           },
           col2: {
             h2: 'Capricosa',
-            body: 'Artichoke, Mozzerella, Basil, rich tomato sauce',
+            p: 'Artichoke, Mozzerella, Basil, rich tomato sauce',
             price: '16'
           },
           col3: {
             h2: 'Al Fungi',
-            body: 'All the shrooms, spicy peperoni, rich tomato sauce',
+            p: 'All the shrooms, spicy peperoni, rich tomato sauce',
+            price: '20'
+          }
+        },
+        dinner: {
+          h1: { h1: 'Dinner' },
+          col1: {
+            h2: 'Margarita',
+            p: 'cheese, basil, love',
+            price: '14'
+          },
+          col2: {
+            h2: 'Capricosa',
+            p: 'Artichoke, Mozzerella, Basil, rich tomato sauce',
+            price: '16'
+          },
+          col3: {
+            h2: 'Al Fungi',
+            p: 'All the shrooms, spicy peperoni, rich tomato sauce',
             price: '20'
           }
         }
       }
     },
-    { index: 2, title: 'Gallery', url: '#' },
-    { index: 3, title: 'About', url: '#' },
-    { index: 4, title: 'Contact', url: '#' }
+    { index: 2, title: 'About', url: '#' },
+    {
+      index: 3, title: 'Contact', content: {
+        address: {
+          col1: {
+            h2: 'This is a map',
+          },
+          col2: {
+            div1: 'street',
+            div2: 'city',
+            div3: 'state',
+            div4: 'post code'
+          }
+        },
+        hours: {
+          col1: {
+            h2: 'Hours',
+            span: 'Monday: 12:00 - 22:00',
+            span: 'Tuesday: 12:00 - 22:00',
+            wed: 'Wednesday: 12:00 - 22:00',
+            thurs: 'Thursday: 12:00 - 22:00',
+            fri: 'Friday: 12:00 - 23:30',
+            sat: 'Saturday: 12:00 - 23:30',
+            sun: 'Sunday: 12:00 - 23:30',
+          }
+        }
+
+      }
+    }
   ],
   footer: {
     col2: {
