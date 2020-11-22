@@ -1,7 +1,7 @@
 .contact {
   display: flex;
   flex-direction: row;
-  height: 75vh;
+  min-height: calc(100vh - (133px));
   .address {
     width: 50%;
     flex-direction: column;

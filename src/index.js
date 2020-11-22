@@ -17,10 +17,10 @@ const siteData = {
             h1: 'Welcome To LePizz',
             span: 'Authentic flavours | Localy sourced',
             p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas illum tenetur culpa tempore facilis at debitis doloribus, ducimus laudantium praesentium et aut rem ea labore maxime molestiae ipsum repellendus ullam! Similique, ut quo.',
-            button: {
+            /* button: {
               text: 'Menu',
-              action: ''
-            },
+              index: 1
+            }, */
           },
           col2: {
             img: 'url(../img/pizza-oven.jpg)'
@@ -60,12 +60,12 @@ const siteData = {
             price: '14'
           },
           col2: {
-            h2: 'Capricosa',
+            h2: 'Quatro Fomage',
             p: 'Artichoke, Mozzerella, Basil, rich tomato sauce',
             price: '16'
           },
           col3: {
-            h2: 'Al Fungi',
+            h2: 'Anchovy & Onion',
             p: 'All the shrooms, spicy peperoni, rich tomato sauce',
             price: '20'
           }
@@ -167,6 +167,7 @@ const switchBodyContent = ((e) => {
     setTimeout(() =>
       domElements.content.childNodes[1].classList.remove('slide-left'), 500);
   }, 1000);
+  console.log(links);
 });
 
 // Initialize page
@@ -177,7 +178,10 @@ domElements.content.appendChild(footer(siteData));
 // Module switching
 const links = Array.from(document.querySelectorAll('li'));
 links.unshift(document.querySelector('.logo'));
-links.forEach(li => {
-  li.addEventListener('click', switchBodyContent);
-});
+links.push(document.querySelector('.btn'));
+links.forEach(li => li.addEventListener('click', switchBodyContent));
+
+// Buttons
+const btns = Array.from(document.querySelectorAll('.btn'));
+btns.forEach(btn => btn.addEventListener('click', switchBodyContent));
 

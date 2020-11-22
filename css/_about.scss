@@ -1,6 +1,6 @@
 .about {
   letter-spacing: $ltr-space;
-  min-height: 75vh;
+  min-height: calc(100vh - (133px));
   .intro {
     width: 100%;
     flex-direction: column;

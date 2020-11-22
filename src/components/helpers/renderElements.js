@@ -12,8 +12,8 @@ const renderBtn = ((content) => {
   const btn = document.createElement('a');
   btn.classList.add('btn');
   btn.textContent = content.text;
-  btn.addEventListener('click', () => {
-  });
+  btn.setAttribute('data-index', content.index);
+  //btn.addEventListener('click', content.action);
 
   return btn;
 })

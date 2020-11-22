@@ -3,7 +3,9 @@
     position: absolute;
     border: 2px $black solid;
     opacity: 0.1;
-    height: 100vh;
+    min-height: 570px;
+    height: calc(100vh - 6rem);
+    max-height: calc(570px + 6rem);
     width: 40vw;
     z-index: -1;
     right: 8rem;
@@ -81,6 +83,7 @@
         width: 3.5rem;
         height: 3.5rem;
         background-size: contain;
+        
       }
       h2 {
         margin: 0.5rem 0 0;

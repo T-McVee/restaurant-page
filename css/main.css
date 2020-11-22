@@ -2,7 +2,9 @@
   position: absolute;
   border: 2px #393737 solid;
   opacity: 0.1;
-  height: 100vh;
+  min-height: 570px;
+  height: calc(100vh - 6rem);
+  max-height: calc(570px + 6rem);
   width: 40vw;
   z-index: -1;
   right: 8rem;
@@ -194,7 +196,7 @@
 
 .about {
   letter-spacing: 2px;
-  min-height: 75vh;
+  min-height: calc(100vh - (133px));
 }
 
 .about .intro {
@@ -254,7 +256,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 75vh;
+  min-height: calc(100vh - (133px));
 }
 
 .contact .address {
@@ -419,7 +421,7 @@ footer {
   background-color: #393737;
   color: #fcf3ec;
   letter-spacing: 2px;
-  height: 25vh;
+  height: 133px;
   padding: 1rem 4rem;
 }
 
