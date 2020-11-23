@@ -18,10 +18,6 @@ const siteData = {
             h1: 'Welcome To LePizz',
             span: 'Authentic flavours | Localy sourced',
             p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas illum tenetur culpa tempore facilis at debitis doloribus, ducimus laudantium praesentium et aut rem ea labore maxime molestiae ipsum repellendus ullam! Similique, ut quo.',
-            /* button: {
-              text: 'Menu',
-              index: 1
-            }, */
           },
           col2: {
             img: 'url(img/pizza-oven.jpg)'
@@ -34,15 +30,16 @@ const siteData = {
             span: 'Enough said right?'
           },
           col2: {
-            img: 'url(img/waiter.png)',
-            h2: 'Amazing service',
-            span: 'Experience a true Itallian delight'
-          },
-          col3: {
             img: 'url(img/wine.png)',
             h2: 'Curated wine selection',
             span: 'Hand selected wines, picked by our inhouse sommelier'
           },
+          col3: {
+            img: 'url(img/waiter.png)',
+            h2: 'Amazing service',
+            span: 'Experience a true Itallian delight'
+          },
+
         },
       }
     },

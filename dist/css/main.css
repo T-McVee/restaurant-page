@@ -99,13 +99,14 @@
 }
 
 .home .value-props .col {
-  width: 33%;
+  width: 220px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -118,25 +119,67 @@
 .home .value-props .col .img {
   width: 3.5rem;
   height: 3.5rem;
+  min-height: 3.5rem;
   background-size: contain;
 }
 
 .home .value-props .col h2 {
+  font-size: 1.2rem;
   margin: 0.5rem 0 0;
   letter-spacing: 2px;
   text-align: center;
 }
 
-.home .value-props .col p {
+.home .value-props .col span {
   font-size: 1.1rem;
   margin: 0.5rem 0;
   text-align: center;
 }
 
 .home .value-props .col:first-child .img {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 3px;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.home .value-props .col:nth-child(2) {
+  width: 240px;
+}
+
+@media screen and (max-width: 911px) {
+  .home .splash {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home .splash .col:nth-child(1) {
+    width: 100%;
+    padding: 6rem 0 0;
+    height: auto;
+  }
+  .home .splash .col:nth-child(1) p {
+    text-align: center;
+  }
+  .home .splash .col:nth-child(2) {
+    width: 80%;
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
+  .home .splash .col:nth-child(2) .img {
+    height: 220px;
+    background-size: cover;
+    background-position-y: -0px;
+  }
+  .home .value-props {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 0;
+  }
+  .home .value-props .col {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .menu {
@@ -194,6 +237,27 @@
   margin-bottom: 4rem;
 }
 
+@media screen and (max-width: 911px) {
+  .menu .lunch-items, .menu .dinner-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .menu .lunch-items .col, .menu .dinner-items .col {
+    margin-bottom: 0.75rem;
+    width: 180px;
+  }
+  .menu .lunch-items .col h2, .menu .dinner-items .col h2 {
+    font-size: 1rem;
+  }
+  .menu .lunch-items .col p, .menu .dinner-items .col p {
+    width: 90%;
+    font-size: 0.8rem;
+  }
+}
+
 .about {
   letter-spacing: 2px;
   min-height: calc(100vh - (133px));
@@ -246,6 +310,15 @@
   width: 60%;
   text-align: justify;
   line-height: 1.2rem;
+}
+
+@media screen and (max-width: 911px) {
+  .about .intro .col:nth-child(1) .img {
+    background-size: cover;
+  }
+  .about .intro .col:nth-child(2) p {
+    text-align: center;
+  }
 }
 
 .contact {
@@ -349,6 +422,37 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0;
+}
+
+@media screen and (max-width: 911px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .address {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 4rem;
+  }
+  .contact .address .col:nth-child(1) {
+    width: 100%;
+    text-align: center;
+  }
+  .contact .address .col:nth-child(2) {
+    width: 100%;
+    height: 230px;
+  }
+  .contact .hours {
+    width: 100%;
+  }
+  .contact .hours .col {
+    width: 100%;
+  }
 }
 
 * {
@@ -548,5 +652,38 @@ footer .col:nth-child(2) a:hover {
   color: #f2c9aa;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 911px) {
+  nav ul {
+    padding-right: 4rem;
+  }
+  nav ul li {
+    margin-right: 0.5rem;
+  }
+  footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  footer .col:nth-child(1) {
+    display: none;
+  }
+  footer .col:nth-child(2) {
+    width: 100%;
+  }
+  footer .col:nth-child(3) {
+    width: 100%;
+  }
+  footer .col:nth-child(3) span {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px #f4d2b7 solid;
+  }
 }
 /*# sourceMappingURL=main.css.map */

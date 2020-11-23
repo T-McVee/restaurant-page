@@ -38,4 +38,21 @@
   .dinner-items {
     margin-bottom: 4rem;
   }
+  @media screen and (max-width: 911px) {
+    .lunch-items, .dinner-items {
+      flex-direction: column;
+      padding: 0;
+      .col {
+        margin-bottom: 0.75rem;
+        width: 180px;
+        h2 {
+          font-size: 1rem;
+        }
+        p {
+          width: 90%;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
 }
