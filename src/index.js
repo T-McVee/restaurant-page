@@ -24,7 +24,7 @@ const siteData = {
             }, */
           },
           col2: {
-            img: 'url(img/pizza-oven.jpg)'
+            img: 'url(/img/pizza-oven.jpg)'
           },
         },
         valueProps: {
