@@ -25,11 +25,32 @@
   }
   .hours {
     width: 50%;
+    letter-spacing: $ltr-space;
+    line-height: 1.2rem;
+    flex-direction: column;
     .col {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+    }
+    .col:nth-child(1) {
+      margin-bottom: 2rem;
+    }
+    .col:nth-child(2) {
+      justify-content: center;
+      h3 {
+        margin: 0;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+      }
     }
   }
 }

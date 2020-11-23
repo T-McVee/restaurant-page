@@ -1,6 +1,4 @@
-import { navBar } from './components/navBar'
 import { row } from './components/row'
-import { footer } from './components/footer'
 
 const pageLoad = ((pageContent, index) => {
   let sections = Object.keys(pageContent.pages[index].content);

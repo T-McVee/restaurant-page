@@ -6,6 +6,7 @@ const domElements = {
   content: document.querySelector('#content')
 };
 
+// Object containing content for all pages
 const siteData = {
   pages: [
     {
@@ -40,7 +41,7 @@ const siteData = {
           col3: {
             img: 'url(../img/wine.png)',
             h2: 'Curated wine selection',
-            span: 'Hand selected wines picked by our inhouse sommilier'
+            span: 'Hand selected wines, picked by our inhouse sommelier'
           },
         },
       }
@@ -131,6 +132,13 @@ const siteData = {
             fri: 'Friday: 12:00 - 23:30',
             sat: 'Saturday: 12:00 - 23:30',
             sun: 'Sunday: 12:00 - 23:30',
+          },
+          col2: {
+            h3: 'Contact Us',
+            ul: {
+              li1: 'p: 123-456-7890',
+              li2: 'e: lepizz@notarealemail.com'
+            }
           }
         }
 
@@ -142,7 +150,8 @@ const siteData = {
       span: `Created by T-McVee `,
       i: {
         classes: ['fab', 'fa-github', 'fa-lg'],
-        url: 'https://github.com/T-McVee'
+        url: 'https://github.com/T-McVee',
+        target: 'blank'
       }
     },
     col3: {
@@ -167,7 +176,6 @@ const switchBodyContent = ((e) => {
     setTimeout(() =>
       domElements.content.childNodes[1].classList.remove('slide-left'), 500);
   }, 1000);
-  console.log(links);
 });
 
 // Initialize page
@@ -175,13 +183,12 @@ domElements.content.appendChild(navBar(siteData.pages));
 domElements.content.appendChild(pageLoad(siteData, 0));
 domElements.content.appendChild(footer(siteData));
 
-// Module switching
+// Module switching for links
 const links = Array.from(document.querySelectorAll('li'));
 links.unshift(document.querySelector('.logo'));
-links.push(document.querySelector('.btn'));
 links.forEach(li => li.addEventListener('click', switchBodyContent));
 
-// Buttons
+// Module switching for buttons
 const btns = Array.from(document.querySelectorAll('.btn'));
 btns.forEach(btn => btn.addEventListener('click', switchBodyContent));
 

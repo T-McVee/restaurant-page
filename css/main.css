@@ -296,6 +296,12 @@
 
 .contact .hours {
   width: 50%;
+  letter-spacing: 2px;
+  line-height: 1.2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact .hours .col {
@@ -310,6 +316,39 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+.contact .hours .col:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.contact .hours .col:nth-child(2) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .hours .col:nth-child(2) h3 {
+  margin: 0;
+  text-align: center;
+}
+
+.contact .hours .col:nth-child(2) ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
 }
 
 * {
