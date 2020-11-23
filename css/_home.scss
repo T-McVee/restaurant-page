@@ -74,23 +74,25 @@
   .value-props {
     justify-content: space-between;
     .col {
-      width: 33%;
+      width: 220px;
+      height: 150px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       flex-direction: column;
       .img {
         width: 3.5rem;
         height: 3.5rem;
+        min-height: 3.5rem;
         background-size: contain;
-        
       }
       h2 {
+        font-size: 1.2rem;
         margin: 0.5rem 0 0;
         letter-spacing: $ltr-space;
         text-align: center;
       }
-      p {
+      span {
         font-size: 1.1rem;
         margin: 0.5rem 0;
         text-align: center;
@@ -98,9 +100,42 @@
     }
     .col:first-child {
       .img {
-        width: 3rem;
-        height: 3rem;
-        margin-bottom: 3px;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+    .col:nth-child(2) {
+      width: 240px;
+    }
+  }
+  @media screen and (max-width: 911px) {
+    .splash {
+      flex-direction: column;
+
+      .col:nth-child(1) {
+        width: 100%;
+        padding: 6rem 0 0;
+        height: auto;
+        p {
+          text-align: center;
+        }
+      }
+      .col:nth-child(2) {
+        width: 80%;
+        margin-top: 2rem;
+        margin-left: 4rem;
+        .img {
+          height: 220px;
+          background-size: cover;
+          background-position-y: -0px;
+        }
+      }
+    }
+    .value-props{
+      flex-direction: column;
+      padding-bottom: 0;
+      .col {
+        margin-bottom: 0.5rem;
       }
     }
   }

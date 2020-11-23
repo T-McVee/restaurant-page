@@ -32,4 +32,18 @@
       }
     }
   }
+  @media screen and (max-width: 911px) {
+    .intro {
+      .col:nth-child(1) {
+        .img {
+          background-size: cover;
+        }
+      }
+      .col:nth-child(2) {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

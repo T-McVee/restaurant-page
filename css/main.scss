@@ -144,4 +144,33 @@ footer {
     }
   }
 }
+@media screen and (max-width: 911px) {
+  nav {
+    ul {
+      padding-right: 4rem;
+      li {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  footer {
+    height: fit-content;
+    flex-direction: column-reverse;
+    .col:nth-child(1) {
+      display: none;
+    }
+    .col:nth-child(2) {
+      width: 100%;
+    }
+    .col:nth-child(3) {
+      width: 100%;
+      span {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1rem;
+        border-bottom: 1px darken($color: $bg-color, $amount: 12)  solid;
+      }
+    }
+  }
+}
 
