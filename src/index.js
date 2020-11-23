@@ -24,22 +24,22 @@ const siteData = {
             }, */
           },
           col2: {
-            img: 'url(/img/pizza-oven.jpg)'
+            img: 'url(img/pizza-oven.jpg)'
           },
         },
         valueProps: {
           col1: {
-            img: 'url(../img/pizza.png)',
+            img: 'url(img/pizza.png)',
             h2: 'Tasty Pizza',
             span: 'Enough said right?'
           },
           col2: {
-            img: 'url(../img/waiter.png)',
+            img: 'url(img/waiter.png)',
             h2: 'Amazing service',
             span: 'Experience a true Itallian delight'
           },
           col3: {
-            img: 'url(../img/wine.png)',
+            img: 'url(img/wine.png)',
             h2: 'Curated wine selection',
             span: 'Hand selected wines, picked by our inhouse sommelier'
           },
@@ -100,7 +100,7 @@ const siteData = {
       index: 2, title: 'About', content: {
         intro: {
           col1: {
-            img: 'url(../img/pizza-oven.jpg)'
+            img: 'url(img/pizza-oven.jpg)'
           },
           col2: {
             h2: 'For the love of pizza',
