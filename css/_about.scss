@@ -1,0 +1,35 @@
+.about {
+  letter-spacing: $ltr-space;
+  min-height: calc(100vh - (133px));
+  .intro {
+    width: 100%;
+    flex-direction: column;
+    .col:first-child {
+      width: 100%;
+      height: 200px;
+      padding-top: 4rem;
+      .img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .col:nth-child(2) {
+      margin: 2rem 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        text-align: center;
+        border-bottom: 2px $black solid;
+        padding: 0 0.25rem;
+      }
+      p {
+        width: 60%;
+        text-align: justify;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}

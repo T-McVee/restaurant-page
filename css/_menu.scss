@@ -1,0 +1,41 @@
+.menu {
+  letter-spacing: $ltr-space;
+  .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 0;
+  }
+  .lunch-title, .dinner-title {
+    padding-top: 6rem;
+    .col {
+      h2 {
+        margin: 0 0 0.5rem;
+      }
+    }
+  }
+  .lunch-items, .dinner-items {
+    .col {
+    height: 28vh;
+    width: 33%;
+    border: 2px $black solid;
+    margin: 0 5%;
+    h2 {
+      margin: 0;
+      padding: 0 0.25rem;
+      border-bottom: 2px $black solid;
+    }
+    p {
+      width: 180px;
+    }
+    }
+  }
+  .dinner-title {
+    padding-top: 2rem;
+  }
+  .dinner-items {
+    margin-bottom: 4rem;
+  }
+}
