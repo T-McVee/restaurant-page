@@ -1,4 +1,4 @@
-import { row } from './components/row'
+import { row } from './components'
 
 const pageLoad = ((pageContent, index) => {
   let sections = Object.keys(pageContent.pages[index].content);
