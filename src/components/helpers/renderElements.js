@@ -85,6 +85,8 @@ const renderCol = ((colContent) => {
   const col = document.createElement('div');
   col.classList.add('col');
   elements.forEach(el => {
+    console.log(el);
+
     el === 'img'
       ? col.appendChild(_renderImg(colContent[el]))
       : el === 'button'
