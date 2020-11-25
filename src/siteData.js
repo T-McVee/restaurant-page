@@ -1,5 +1,8 @@
 import { Loader } from '@googlemaps/js-api-loader'
 
+// Class for each type of DOM element. 
+// Render methods define how each class will apear in DOM
+
 class ImgEl {
   constructor(content) {
     this.content = content;
@@ -22,8 +25,8 @@ class BtnEl {
   renderElement() {
     const btn = document.createElement('a');
     btn.classList.add('btn');
-    btn.textContent = content.text;
-    btn.setAttribute('data-index', content.index);
+    btn.textContent = this.content.text;
+    btn.setAttribute('data-index', this.content.index);
 
     return btn;
   }
@@ -100,6 +103,7 @@ class ListEl {
   }
 }
 
+// Define content for site pages
 const siteData = {
   pages: [
     {
@@ -110,7 +114,11 @@ const siteData = {
           col1: {
             h1: new TextEl('Welcome To LePizz', 'h1'),
             span: new TextEl('Authentic flavours | Localy sourced', 'span'),
-            p: new TextEl('Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas illum tenetur culpa tempore facilis at debitis doloribus, ducimus laudantium praesentium et aut rem ea labore maxime molestiae ipsum repellendus ullam! Similique, ut quo.', 'p')
+            p: new TextEl('Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quos voluptas illum tenetur culpa tempore facilis at debitis doloribus, ducimus laudantium praesentium et aut rem ea labore maxime molestiae ipsum repellendus ullam! Similique, ut quo.', 'p'),
+            button: new BtnEl({
+              text: 'Menu',
+              index: 1
+            })
           },
           col2: {
             img: new ImgEl('url(img/pizza-oven.jpg)')

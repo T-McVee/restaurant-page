@@ -7,6 +7,8 @@ const domElements = {
 };
 
 const switchBodyContent = ((e) => {
+  console.log('poo');
+
   domElements.content.childNodes[1].classList.add('slide-right');
   setTimeout(() => {
     // Remove old module
@@ -21,7 +23,10 @@ const switchBodyContent = ((e) => {
     domElements.content.childNodes[1].classList.add('slide-left');
     setTimeout(() =>
       domElements.content.childNodes[1].classList.remove('slide-left'), 500);
+    const btns = Array.from(document.querySelectorAll('.btn'));
+    btns.forEach(btn => btn.addEventListener('click', switchBodyContent));
   }, 1000);
+
 });
 
 // Initialize page
@@ -29,13 +34,13 @@ const init = (() => {
   domElements.content.appendChild(navBar(siteData.pages));
   domElements.content.appendChild(pageLoad(siteData, 0));
   domElements.content.appendChild(footer(siteData));
+
+  // Module switching for links
+  const links = Array.from(document.querySelectorAll('li'));
+  links.unshift(document.querySelector('.logo'));
+  links.forEach(li => li.addEventListener('click', switchBodyContent));
+
+  // Module switching for buttons
+  const btns = Array.from(document.querySelectorAll('.btn'));
+  btns.forEach(btn => btn.addEventListener('click', switchBodyContent));
 })();
-
-// Module switching for links
-const links = Array.from(document.querySelectorAll('li'));
-links.unshift(document.querySelector('.logo'));
-links.forEach(li => li.addEventListener('click', switchBodyContent));
-
-// Module switching for buttons
-const btns = Array.from(document.querySelectorAll('.btn'));
-btns.forEach(btn => btn.addEventListener('click', switchBodyContent));
